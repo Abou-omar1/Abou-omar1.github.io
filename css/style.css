@@ -239,7 +239,7 @@
         .box1 {
             display: flex;
             justify-content: space-evenly;
-            width: 40%;
+            width: 100%;
             min-height: auto;
             flex-direction: column;
             align-items: center;
@@ -259,19 +259,24 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            width: 90%;
-            min-height: auto;
+            /* width: 90%;
+            min-height: auto; */
             aspect-ratio: 100/70;
         }
         
         .info {
             min-height: auto;
-            width: 90%;
-            text-align: center;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around;
+
         }
         
         .box1 p {
-            font-family: "cairobold";
+            font-family: 'Noto Sans Arabic';
+
             color: #D4AD29;
             font-size: 20px;
         }
