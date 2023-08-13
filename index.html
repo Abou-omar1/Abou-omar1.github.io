@@ -10,14 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="img/logo.png">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;400&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@200;400&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <div id="container-menu">
-        <a href="#header" class="arrow up">^</a>
+        <a href="#header" class="arrow up"></a>
 
         <header id="header">
 
@@ -38,6 +42,23 @@
         <main>
 
             <section id="menu">
+
+                <div id="slideshow">
+                    <img class="slide active" src="img/sweets/DSC_1181.jpg" alt="Image 1">
+                    <img class="slide" src="img/sweets/DSC_1183.jpg" alt="Image 2">
+                    <img class="slide" src="img/sweets/1bec85f8-927a-4ab3-af06-92338d19ab25.jpg" alt="Image 3">
+                    <img class="slide" src="img/sweets/addcc00f-bb9d-414a-9730-861e64c01c51.jpg" alt="Image 4">
+                    <img class="slide" src="img/sweets/2d792be6-984a-49c4-b50a-81b2bd5bb0a1.jpg" alt="Image 6">
+                    <img class="slide" src="img/sweets/DSC_1310.JPG" alt="Image 7">
+                    <img class="slide" src="img/DSC_1169.jpg" alt="Image 8">
+                    <img class="slide" src="img/sweets/5ecf091d-3071-4de3-a9f6-6d66571c23ba.jpg" alt="Image 7">
+
+
+
+
+                </div>
+
+
 
                 <div class="menu-wrap">
                     <div class="logo"></div>
@@ -102,7 +123,7 @@
 
                         <div class="sweets">
                             <!-- قسم ..............-->
-                            <div id="openarabicsweets" class="openarabicsweets class">
+                            <div id="openarabicsweets" class="openarabicsweets class first">
 
 
                                 <div class="box1">
@@ -156,14 +177,16 @@
                                         <p class="price">700000</p>
                                     </div>
                                 </div>
-
-                                <div class="box1">
+                                <div id="here" class="box1">
                                     <div class="img1"></div>
                                     <div class="info">
                                         <h2 class="soort">برما شامية</h2>
                                         <p class="price">2400000</p>
                                     </div>
+
                                 </div>
+
+
 
                                 <div class="box1">
                                     <div class="img1"></div>
@@ -684,7 +707,8 @@
 
 
 
-                <a href="https://www.facebook.com/people/Abouomar-Sweet/pfbid0r3CXQTvUpZVaFrfbeRtfAAbAZ3DdVCe2QRieKcsjv9VG6914M1VE82UdHDHHFs9ql/" class="icon3"></a>
+                <a href="https://www.facebook.com/people/Abouomar-Sweet/pfbid0r3CXQTvUpZVaFrfbeRtfAAbAZ3DdVCe2QRieKcsjv9VG6914M1VE82UdHDHHFs9ql/"
+                    class="icon3"></a>
 
             </div>
             <p> &copy; 2023 Abou-Omar. All rights reserved.</p>
@@ -696,16 +720,16 @@
         let nav = document.querySelector("nav ul");
         let a = document.querySelectorAll("a");
 
-        demo.addEventListener('click', function() {
+        demo.addEventListener('click', function () {
             nav.classList.toggle('verborgen');
 
         });
 
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             let categories = document.querySelector('.categories');
             let scrollPosition = window.scrollY;
             let arrow = document.querySelector(".arrow")
-            let elementOffset = document.querySelector("#openarabicsweets").offsetTop;
+            let elementOffset = document.querySelector("#here").offsetTop;
 
             if (scrollPosition > elementOffset) {
                 arrow.style.display = "block";
@@ -714,7 +738,7 @@
 
             } else {
                 arrow.style.display = "none";
-                categories.style.width = "100%";
+                categories.style.width = "95%";
                 categories.classList.remove('sticky');
             }
         });
@@ -771,6 +795,19 @@
 
         // Start observing the target elements
         menuItems.forEach(menuItem => observer.observe(menuItem));
+
+
+
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(showSlide, 3000);
     </script>
 </body>
 
