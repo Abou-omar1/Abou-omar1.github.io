@@ -25,17 +25,7 @@
             margin: 0 auto;
         }
 
-        .arrow {
-            position: fixed;
-            height: 30px;
-            bottom: 130px;
-            right: 50%;
-            font-size: 40px;
-            color: #D4AD29;
-            display: inline-block;
-            z-index: 9999;
-        }
-
+  
         @font-face {
             font-family: "cairolight";
             src: url("../fonts/cairoplay-light-webfont.woff") format("woff");
@@ -275,11 +265,10 @@
 
         .info {
             min-height: auto;
-            width: 100%;
+            width: 70%;
             text-align: center;
             display: flex;
-            justify-content: space-evenly;
-            align-content: space-around;
+            justify-content: space-between;
 
         }
 
