@@ -25,7 +25,7 @@
             margin: 0 auto;
         }
 
-  
+
         @font-face {
             font-family: "cairolight";
             src: url("../fonts/cairoplay-light-webfont.woff") format("woff");
@@ -180,7 +180,8 @@
             border-left: 1px solid #D4AD29;
             height: 26px;
             position: relative;
-            top: 50px;
+            top: 30px;
+
         }
 
         .knop h4 {
@@ -276,14 +277,14 @@
             font-family: 'Noto Sans Arabic';
 
             color: #D4AD29;
-            font-size: 20px;
+            font-size: 17px;
         }
 
         .box1 h2 {
             font-family: 'Noto Sans Arabic';
             font-weight: 400;
             color: #ED1D23;
-            font-size: 17px;
+            font-size: 15px;
         }
 
         .textinfo {
@@ -380,6 +381,14 @@
             background-image: url(../img/icons/facebook.png);
         }
 
+        #border1{
+            border-bottom: #D4AD29 1px solid;
+            width: 70%;
+            margin: 0 auto;
+            height: 10px;
+        }
+    
+
         .icon1,
         .icon2,
         .icon3 {
@@ -398,7 +407,8 @@
             }
 
             .categories {
-                padding: 1rem;
+                padding: 14px;
+                padding-top: 32px;
             }
 
             .categories.sticky {
@@ -414,6 +424,7 @@
                 align-items: center;
             }
 
+            .knop {padding: 7px;}
         }
 
         @media (min-width:888px) {
