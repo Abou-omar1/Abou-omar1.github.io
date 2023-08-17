@@ -159,7 +159,7 @@
         }
 
         .categories {
-            width: 100%;
+            width: 90%;
             min-height: auto;
             margin-top: 3rem;
             padding-top: 3rem;
@@ -585,9 +585,7 @@
                 display: none;
             }
 
-            .categories {
-                width: 100%;
-            }
+        
 
             .menu-wrap {
                 padding: 3rem;
@@ -612,7 +610,6 @@
             .categories {
                 display: flex;
                 flex-wrap: wrap;
-                width: 100%;
                 min-height: auto;
                 flex-direction: row;
                 align-content: flex-end;
